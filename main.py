@@ -5,7 +5,7 @@ import threading
   
 def DownloadFromYT(stream): 
     stream.download()
-    print(Fore.GREEN + "DOWNLOADED !! %s" % file_name)
+    
 
 def DownloadProcess(size):
     length = size
@@ -32,3 +32,5 @@ t2.start()
 t1.join() 
 t2.join()
 
+
+print(Fore.GREEN + "DOWNLOADED !! %s" % file_name)
