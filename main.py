@@ -1,15 +1,19 @@
 from pytube import YouTube
 from tqdm import tqdm
+from colorama import Fore, Back, Style
 import threading
   
 def DownloadFromYT(stream): 
     stream.download()
+    print(Fore.GREEN + "DOWNLOADED !! %s" % file_name)
 
 def DownloadProcess(size):
     length = size
     generator = (3 * n for n in range(length))  
     for n in tqdm(generator, total=length):
         pass
+    print(Fore.BLUE + "Rendering...")
+    
     
 link = str(input("Enter Your Link: "))
  
@@ -28,4 +32,3 @@ t2.start()
 t1.join() 
 t2.join()
 
-print("DOWNLOADED !! %s" % file_name)
